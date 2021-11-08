@@ -14,8 +14,11 @@
 
 	<h:form id="bla">
 	<span class="ui-float-label">
-  		<p:inputText value="#{kredBB.x}" />
-  		<p:outputLabel for="@previous" value="Wartość (PLN)"/>
+	    <h:outputLabel for="@previous" value="Wartość (PLN)"/>
+            <p:inputText id="number" value="#{kredBB.x}" label="Number">
+                <f:validateLength minimum="4"/>
+            </p:inputText>
+            <h:outputText value="#{kredBB.x}"/>
   		</span>
 		<br />
 		<span class="ui-float-label">
